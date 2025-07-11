@@ -37,13 +37,6 @@ public class ProductoDTO {
 		this.stock = stock;
 	}
 	
-	public ProductoDTO() {}
-
-    public ProductoDTO(Long id, String nombre, double precio, int stock) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
-    }
+	
 
 }

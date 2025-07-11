@@ -43,7 +43,7 @@ public class PedidoController {
     }
     
     @GetMapping("/pedidosCliente/{id}")
-    public ResponseEntity<List<PedidoDTO>> obtenerPedidosPorCliente(@PathVariable Long clienteId) {
+    public ResponseEntity<List<PedidoDTO>> obtenerPedidosPorCliente(@PathVariable("id") Long clienteId) {
         return ResponseEntity.ok(pedidoService.listarPedidosPorCliente(clienteId));
     }
 

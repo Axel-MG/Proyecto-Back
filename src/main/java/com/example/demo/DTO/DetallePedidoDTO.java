@@ -9,12 +9,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DetallePedidoDTO {
-    private Long productoId;    // Entrada
-    private Producto producto;    // Salida
+    private Long productoId;
+    private String productoNombre;
+    private double productoPrecio;
     private int cantidad;
     private double subtotal;
-    private Pedido pedido;
-    
+
     public Long getProductoId() {
         return productoId;
     }
@@ -22,40 +22,37 @@ public class DetallePedidoDTO {
     public void setProductoId(Long productoId) {
         this.productoId = productoId;
     }
-    
-    public Producto getProducto() {
-		return producto;
-	}
 
-	public void setProducto(Producto producto) {
-		this.producto = producto;
-	}
+    public String getProductoNombre() {
+        return productoNombre;
+    }
 
-	public Pedido getPedido() {
-		return pedido;
-	}
+    public void setProductoNombre(String productoNombre) {
+        this.productoNombre = productoNombre;
+    }
 
-	public void setPedido(Pedido pedido) {
-		this.pedido = pedido;
-	}
+    public double getProductoPrecio() {
+        return productoPrecio;
+    }
 
-	public int getCantidad() {
-		return cantidad;
-	}
+    public void setProductoPrecio(double productoPrecio) {
+        this.productoPrecio = productoPrecio;
+    }
 
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
-	}
+    public int getCantidad() {
+        return cantidad;
+    }
 
-	public double getSubtotal() {
-		return subtotal;
-	}
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 
-	public void setSubtotal(double subtotal) {
-		this.subtotal = subtotal;
-	}
-	public void setProductoNombre(String nombre) {
-		this.producto = new Producto();
-		this.producto.setNombre(nombre);
-	}
+    public double getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal = subtotal;
+    }
+
 }
