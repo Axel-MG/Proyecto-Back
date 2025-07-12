@@ -96,6 +96,7 @@ public class PedidoServiceImpl implements PedidoService {
 
 	private PedidoDTO convertirAPedidoDTO(Pedido pedido) {
 	    PedidoDTO dto = new PedidoDTO();
+	    dto.setId(pedido.getId());
 	    dto.setClienteID(pedido.getCliente().getId());
 	    dto.setFecha(pedido.getFecha());
 	    dto.setTotal(pedido.getTotal());
@@ -105,6 +106,7 @@ public class PedidoServiceImpl implements PedidoService {
 	        DetallePedidoDTO d = new DetallePedidoDTO();
 	        d.setProductoId(dp.getProducto().getId());
 	        d.setProductoNombre(dp.getProducto().getNombre());
+	        d.setProductoPrecio(dp.getProducto().getPrecio());
 	        d.setCantidad(dp.getCantidad());
 	        d.setSubtotal(dp.getSubtotal());
 	        detalleDTOs.add(d);

@@ -14,7 +14,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class PedidoDTO {            
+public class PedidoDTO {  
+	private Long id;
 	private Long clienteId;   
     private LocalDate fecha;        
     private double total;
@@ -22,7 +23,12 @@ public class PedidoDTO {
     public Long getclienteId() {
 		return clienteId;
 	}
-
+    public Long getId() {
+		return id;
+	}
+    public void setId(Long id) {
+		this.id = id;
+	}
 	public void setClienteID(Long clienteID) {
 		this.clienteId = clienteID;
 	}

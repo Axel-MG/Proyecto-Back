@@ -41,10 +41,5 @@ public class ClienteDTO {
 		this.correo = correo;
 	}
 	
-	 public ClienteDTO(Long id, String nombre, String correo) {
-	        this.id = id;
-	        this.nombre = nombre;
-	        this.correo = correo;
-	    }
-
+	 
 }
