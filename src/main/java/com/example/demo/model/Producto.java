@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
-@Builder
+
 @Entity
 
 public class Producto {
@@ -15,11 +15,15 @@ public class Producto {
 	private String nombre;
 	private double precio;
 	private int stock;
+	private String imagen;
+	
 	public Producto(Long id, String nombre, double precio, int stock) {
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
 		this.stock = stock;
+		
+
 	}
 	public Producto() {
 
@@ -47,6 +51,13 @@ public class Producto {
 	}
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+	public String getImagen() {
+		return imagen;
+		
+	}
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
 	
