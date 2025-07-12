@@ -26,7 +26,7 @@ public class ProductoServiceImpl implements ProductoService {
                         producto.getNombre(),
                         producto.getPrecio(),
                         producto.getStock(),
-                        producto.getImagen() // ✅ imagen incluida
+                        producto.getImagen() 
                 ))
                 .collect(Collectors.toList());
     }
