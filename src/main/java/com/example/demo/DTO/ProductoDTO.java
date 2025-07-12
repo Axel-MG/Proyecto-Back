@@ -19,6 +19,7 @@ public class ProductoDTO {
     @Min(value = 0)
     private int stock;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
     public String getNombre() {
 		return nombre;
@@ -50,6 +51,9 @@ public class ProductoDTO {
 =======
 >>>>>>> Stashed changes
 
+=======
+
+>>>>>>> Stashed changes
     private String imagen;  // <--- AÑADE ESTO
 
     // Getters y setters
