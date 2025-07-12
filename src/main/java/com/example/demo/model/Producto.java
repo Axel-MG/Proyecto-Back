@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import lombok.*;
 
 @Entity
@@ -15,6 +16,7 @@ public class Producto {
 	private String nombre;
 	private double precio;
 	private int stock;
+	@Lob
 	private String imagen;
 	
 	public Producto(Long id, String nombre, double precio, int stock) {
