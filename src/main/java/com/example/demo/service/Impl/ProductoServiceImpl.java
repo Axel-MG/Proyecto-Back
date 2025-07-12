@@ -24,10 +24,6 @@ public class ProductoServiceImpl implements ProductoService{
 		 return productoRepository.findAll()
 	                .stream()
 	                .map(prodcuto -> new ProductoDTO(
-	                	prodcuto.getId(),
-	                	prodcuto.getNombre(),
-	                	prodcuto.getPrecio(),
-	                	prodcuto.getStock()
 	                ))
 	                .collect(Collectors.toList());
 	}
@@ -46,10 +42,6 @@ public class ProductoServiceImpl implements ProductoService{
         Producto guardado = productoRepository.save(producto);
 
         return new ProductoDTO(
-            guardado.getId(),
-            guardado.getNombre(),
-            guardado.getPrecio(),
-            guardado.getStock()
         );
     }
 
