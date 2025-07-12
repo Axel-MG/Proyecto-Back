@@ -26,7 +26,7 @@ public class ProductoServiceImpl implements ProductoService {
                         producto.getNombre(),
                         producto.getPrecio(),
                         producto.getStock(),
-                        producto.getImagen() 
+                        producto.getImagen() // ✅ imagen incluida
                 ))
                 .collect(Collectors.toList());
     }
@@ -41,7 +41,7 @@ public class ProductoServiceImpl implements ProductoService {
         producto.setNombre(dto.getNombre());
         producto.setPrecio(dto.getPrecio());
         producto.setStock(dto.getStock());
-        producto.setImagen(dto.getImagen()); 
+        producto.setImagen(dto.getImagen()); // ✅ imagen asignada
 
         Producto guardado = productoRepository.save(producto);
 
@@ -50,7 +50,7 @@ public class ProductoServiceImpl implements ProductoService {
                 guardado.getNombre(),
                 guardado.getPrecio(),
                 guardado.getStock(),
-                guardado.getImagen() 
+                guardado.getImagen() // ✅ imagen devuelta
         );
     }
 }
