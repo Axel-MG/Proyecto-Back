@@ -21,6 +21,7 @@ public class ProductoDTO {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
     public String getNombre() {
 		return nombre;
@@ -52,6 +53,9 @@ public class ProductoDTO {
 =======
 >>>>>>> Stashed changes
 
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
