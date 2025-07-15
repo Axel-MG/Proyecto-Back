@@ -19,6 +19,7 @@ public class PedidoDTO {
 	private Long clienteId;   
     private LocalDate fecha;        
     private double total;
+    private String clienteNombre;
     private List<DetallePedidoDTO> productos;
     public Long getclienteId() {
 		return clienteId;
