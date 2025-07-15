@@ -26,7 +26,7 @@ public class ProductoServiceImpl implements ProductoService {
                         producto.getNombre(),
                         producto.getPrecio(),
                         producto.getStock(),
-                        producto.getImagen() 
+                        producto.getImagen()
                 ))
                 .collect(Collectors.toList());
     }
@@ -41,7 +41,7 @@ public class ProductoServiceImpl implements ProductoService {
         producto.setNombre(dto.getNombre());
         producto.setPrecio(dto.getPrecio());
         producto.setStock(dto.getStock());
-        producto.setImagen(dto.getImagen()); // ✅ imagen asignada
+        producto.setImagen(dto.getImagen());
 
         Producto guardado = productoRepository.save(producto);
 
@@ -50,9 +50,10 @@ public class ProductoServiceImpl implements ProductoService {
                 guardado.getNombre(),
                 guardado.getPrecio(),
                 guardado.getStock(),
-                guardado.getImagen() // ✅ imagen devuelta
+                guardado.getImagen()
         );
     }
+
     @Override
     public void eliminarProducto(Long id) {
         productoRepository.deleteById(id);
@@ -61,7 +62,7 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     public ProductoDTO actualizarProducto(Long id, ProductoDTO dto) {
         Producto producto = productoRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
 
         producto.setNombre(dto.getNombre());
         producto.setPrecio(dto.getPrecio());
@@ -71,26 +72,25 @@ public class ProductoServiceImpl implements ProductoService {
         Producto actualizado = productoRepository.save(producto);
 
         return new ProductoDTO(
-            actualizado.getId(),
-            actualizado.getNombre(),
-            actualizado.getPrecio(),
-            actualizado.getStock(),
-            actualizado.getImagen()
+                actualizado.getId(),
+                actualizado.getNombre(),
+                actualizado.getPrecio(),
+                actualizado.getStock(),
+                actualizado.getImagen()
         );
     }
 
     @Override
     public ProductoDTO obtenerProductoPorId(Long id) {
         Producto producto = productoRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
 
         return new ProductoDTO(
-            producto.getId(),
-            producto.getNombre(),
-            producto.getPrecio(),
-            producto.getStock(),
-            producto.getImagen()
+                producto.getId(),
+                producto.getNombre(),
+                producto.getPrecio(),
+                producto.getStock(),
+                producto.getImagen()
         );
     }
-
 }
