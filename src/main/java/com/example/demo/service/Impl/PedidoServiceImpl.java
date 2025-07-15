@@ -98,6 +98,7 @@ public class PedidoServiceImpl implements PedidoService {
 	    PedidoDTO dto = new PedidoDTO();
 	    dto.setId(pedido.getId());
 	    dto.setClienteID(pedido.getCliente().getId());
+	    dto.setClienteNombre(pedido.getCliente().getNombre());
 	    dto.setFecha(pedido.getFecha());
 	    dto.setTotal(pedido.getTotal());
 
