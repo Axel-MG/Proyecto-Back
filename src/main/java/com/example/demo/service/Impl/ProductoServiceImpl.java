@@ -53,4 +53,44 @@ public class ProductoServiceImpl implements ProductoService {
                 guardado.getImagen() // ✅ imagen devuelta
         );
     }
+    @Override
+    public void eliminarProducto(Long id) {
+        productoRepository.deleteById(id);
+    }
+
+    @Override
+    public ProductoDTO actualizarProducto(Long id, ProductoDTO dto) {
+        Producto producto = productoRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+
+        producto.setNombre(dto.getNombre());
+        producto.setPrecio(dto.getPrecio());
+        producto.setStock(dto.getStock());
+        producto.setImagen(dto.getImagen());
+
+        Producto actualizado = productoRepository.save(producto);
+
+        return new ProductoDTO(
+            actualizado.getId(),
+            actualizado.getNombre(),
+            actualizado.getPrecio(),
+            actualizado.getStock(),
+            actualizado.getImagen()
+        );
+    }
+
+    @Override
+    public ProductoDTO obtenerProductoPorId(Long id) {
+        Producto producto = productoRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+
+        return new ProductoDTO(
+            producto.getId(),
+            producto.getNombre(),
+            producto.getPrecio(),
+            producto.getStock(),
+            producto.getImagen()
+        );
+    }
+
 }
