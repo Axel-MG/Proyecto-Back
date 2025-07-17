@@ -25,6 +25,16 @@ public class Producto {
 		
 
 	}
+	
+	public Producto(Long id, String nombre, double precio, int stock, String imagen) {
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.stock = stock;
+		this.imagen = imagen ;
+		
+
+	}
 	public Producto() {
 
 	}
